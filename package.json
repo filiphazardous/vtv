@@ -10,6 +10,7 @@
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
     "mustache-loader": "^0.4.1",
+    "showdown": "^1.7.1",
     "webpack": "^3.0.0"
   },
   "devDependencies": {
