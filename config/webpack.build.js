@@ -1,6 +1,7 @@
 "use strict";
 
 const helpers = require('./helpers');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 module.exports = {
@@ -12,7 +13,14 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'mustache-loader'
-      }
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'raw-loader',
+          'less-loader',
+        ],
+      },
     ]
   },
 
@@ -34,7 +42,8 @@ module.exports = {
         // Properties here are merged into `locals`
         // passed to the exported render function
       }
-    })
+    }),
+    new ExtractTextPlugin('[name].css'),
   ]
 
 };
