@@ -1,3 +1,5 @@
+"use strict";
+
 const helpers = require('./helpers');
 const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
@@ -6,16 +8,12 @@ module.exports = {
   entry: './index.js',
 
   module: {
-      loaders: [
+    loaders: [
       {
-          test: /\.html$/,
-          loader: 'mustache-loader'
+        test: /\.html$/,
+        loader: 'mustache-loader'
       }
-      ]
-  },
-
-  resolve: {
-    mainFields: ["module", "main"]
+    ]
   },
 
   output: {
@@ -27,8 +25,10 @@ module.exports = {
   plugins: [
     new StaticSiteGeneratorPlugin({
       paths: [
-        '/hello/',
-        '/world/'
+        '/SVENSKA/',
+        '/ENGELSKA/',
+        '/ARABISKA/',
+        '/DARI/',
       ],
       locals: {
         // Properties here are merged into `locals`
