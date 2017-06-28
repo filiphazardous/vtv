@@ -1,0 +1,18 @@
+{
+  "name": "vtv-generator",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "./curlContentful.sh && webpack --progress --profile --bail"
+  },
+  "author": "Filip Joelsson <filip@pixiecoer.com>",
+  "dependencies": {
+    "contentful": "^4.1.2",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4",
+    "mustache-loader": "^0.4.1",
+    "webpack": "^3.0.0"
+  },
+  "devDependencies": {
+    "static-site-generator-webpack-plugin": "^3.4.1"
+  }
+}
