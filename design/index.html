@@ -52,6 +52,19 @@
              border-bottom: 1px transparent !important;
          }
 
+        .header--logo-wrapper {
+            width: 100%;
+            background-color: #463CA0;
+            display: flex;
+        }
+
+        .header--logo {
+            width: 100%;
+            height: 50%;
+            max-width: 700px;
+            float: left;
+        }
+
         header ul li {
             display: inline-block;
             margin: 10px;
@@ -101,10 +114,8 @@
         }
 
         main {
-            width: 100%;
-            max-width: 500px;
-            margin: 25px;
-            float: left;
+            width: calc( 100% - 100px );
+            margin: 50px;
         }
 
         .main--section {
@@ -131,6 +142,12 @@
         }
 
         @media screen and (min-width: 1000px) {
+            .main {
+                max-width: 500px;
+                margin: 25px;
+                float: left;
+            }
+
             .main--section__media {
                 position: absolute;
                 top: 0;
@@ -160,7 +177,9 @@
 </head>
 <body>
 <header class="header">
-    <img class="header--logo" alt="Välkommen till Värmdö - logotyp" src="./img/VTVlogo_vertical_grey.svg"/>
+    <div class="header--logo-wrapper">
+        <img class="header--logo" alt="Välkommen till Värmdö - logotyp" src="./img/VTVlogo_vertical_grey.svg"/>
+    </div>
     <ul class="header--language-menu">
         <li class="header--language-menu__item current">Svenska</li>
         <li class="header--language-menu__item">Engelska</li>
