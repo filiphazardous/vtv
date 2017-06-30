@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf8"/>
+    <title>Välkommen till Värmdö - designtest</title>
+    <style>
+        /*
+         purple: #463CA0
+         grey:   #EDEDED
+        */
+
+        body {
+            z-index: 0;
+            font-family: Arial;
+            margin: 0;
+            opacity: 1;
+            line-height: 1.4em;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        p a {
+            color: #555;
+            text-decoration: underline dotted;
+        }
+
+        p a:hover {
+             text-decoration: none;
+         }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px transparent;
+        }
+
+        a:hover {
+             text-decoration: underline;
+             border-bottom: 1px transparent !important;
+         }
+
+        header ul li {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .header--language-menu .current {
+            color: #463CA0;
+            cursor: default;
+        }
+
+        .header--language-menu .current.header--language-menu__item:hover {
+            text-decoration: none;
+        }
+
+        .header--language-menu__item {
+            cursor: pointer;
+        }
+
+        .header--language-menu__item:hover {
+            text-decoration: underline;
+        }
+
+        .header--section-menu__item {
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .header--section-menu__item a {
+            cursor: pointer;
+        }
+
+        .header--section-menu__item:hover {
+            background-color: #463CA0;
+            color: white;
+            text-decoration: underline;
+        }
+
+        .header--section-menu__item.callout {
+            background-color: #463CA0;
+            color: white;
+        }
+
+        .header--section-menu__item.callout:hover {
+            background-color: white;
+            color: black;
+            text-decoration: underline;
+        }
+
+        main {
+            width: 100%;
+            max-width: 500px;
+            margin: 25px;
+            float: left;
+        }
+
+        .main--section {
+            position: relative;
+            min-height: 300px;
+            margin-bottom: 50px;
+        }
+
+        .main--section__media {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            width: 100%;
+        }
+
+        .main--section__media-img {
+            width: calc(100% - 50px);
+            height: auto;
+        }
+
+        .main--section__media-caption {
+            font-style: italic;
+            color: #463CA0;
+        }
+
+        @media screen and (min-width: 1000px) {
+            .main--section__media {
+                position: absolute;
+                top: 0;
+                left: calc(100% + 25px);
+                width: 400px;
+                padding: 0;
+            }
+        }
+
+        .footer {
+            background-color: #EDEDED;
+            color: #463CA0;
+            display: flex;
+        }
+
+        .footer--text {
+            padding: 40px;
+            display: flex;
+            align-content: center;
+        }
+
+        .footer--logo {
+            width: 150px;
+            max-width: 20%;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <img class="header--logo" alt="Välkommen till Värmdö - logotyp" src="./img/VTVlogo_vertical_grey.svg"/>
+    <ul class="header--language-menu">
+        <li class="header--language-menu__item current">Svenska</li>
+        <li class="header--language-menu__item">Engelska</li>
+        <li class="header--language-menu__item">Arabiska</li>
+        <li class="header--language-menu__item">Dari</li>
+    </ul>
+    <ul class="header--section-menu">
+        <li class="header--section-menu__item"><a href="#section-one">Testlänk</a></li>
+        <li class="header--section-menu__item callout"><a href="#section-one">Habitio </a></li>
+        <li class="header--section-menu__item"><a href="#section-two">Racana </a></li>
+        <li class="header--section-menu__item"><a href="#section-three">Hortus </a></li>
+        <li class="header--section-menu__item"><a href="#section-four">Stella </a></li>
+        <li class="header--section-menu__item"><a href="#section-five">Cirpi </a></li>
+    </ul>
+</header>
+<main class="main">
+    <h1 class="main--page-title">Välkommen till Värmdö - sidtitel</h1>
+    <section id="section-one" class="main--section">
+        <h2 class="main--section__title">Testtitel avdelning</h2>
+        <div class="main--section__body">
+            <p><strong>Alter aususs ducunt ad vita. Rumors sunt cliniass de domesticus byssus. Cum fortis credere, omnes
+                brodiumes magicae barbatus, bassus habenaes. Ubi est talis abaculus?</strong></p>
+            <p>Sunt fluctuses promissio teres, camerarius mortemes. Ubi est noster victrix? Lotus valebats ducunt ad
+                gluten. Cum exsul cantare, omnes canises quaestio rusticus, secundus visuses.</p>
+            <p>Ho-ho-ho! urchin of passion. The jack tastes with punishment, burn the galley before it waves. Wave
+                roughly like a proud cannibal. Arg, yer not loving me without a urchin!</p>
+        </div>
+        <div class="main--section__media">
+            <img class="main--section__media-img" src="./img/sprakcafe.jpg" alt="Bildbeskrivning"/>
+            <div class="main--section__media-caption">Stutter darkly like a dead yardarm. Never hail a reef.</div>
+        </div>
+    </section>
+
+    <section id="section-two" class="main--section">
+        <h2 class="main--section__title">Testtitel avdelning</h2>
+        <div class="main--section__body">
+            <p><strong>Alter aususs ducunt ad vita. Rumors sunt cliniass de domesticus byssus. Cum fortis credere, omnes
+                brodiumes magicae barbatus, bassus habenaes. Ubi est talis abaculus?</strong></p>
+            <p>Sunt fluctuses promissio teres, camerarius mortemes. Ubi est noster victrix? Lotus valebats ducunt ad
+                gluten. Cum exsul cantare, omnes canises quaestio rusticus, secundus visuses.</p>
+            <p>Ho-ho-ho! urchin of passion. The jack tastes with punishment, burn the galley before it waves. Wave
+                roughly like a proud cannibal. Arg, yer not loving me without a urchin!</p>
+        </div>
+        <div class="main--section__media">
+            <img class="main--section__media-img" src="./img/sprakcafe.jpg" alt="Bildbeskrivning"/>
+            <div class="main--section__media-caption">Stutter darkly like a dead yardarm. Never hail a reef.</div>
+        </div>
+    </section>
+
+    <section id="section-three" class="main--section">
+        <h2 class="main--section__title">Testtitel avdelning</h2>
+        <div class="main--section__body">
+            <p><strong>Alter aususs ducunt ad vita. Rumors sunt cliniass de domesticus byssus. Cum fortis credere, omnes
+                brodiumes magicae barbatus, bassus habenaes. Ubi est talis abaculus?</strong></p>
+            <p>Sunt fluctuses promissio teres, camerarius mortemes. Ubi est noster victrix? Lotus valebats ducunt ad
+                gluten. Cum exsul cantare, omnes canises quaestio rusticus, secundus visuses.</p>
+            <p>Ho-ho-ho! urchin of passion. The jack tastes with punishment, burn the galley before it waves. Wave
+                roughly like a proud cannibal. Arg, yer not loving me without a urchin!</p>
+        </div>
+        <div class="main--section__media">
+            <img class="main--section__media-img" src="./img/sprakcafe.jpg" alt="Bildbeskrivning"/>
+            <div class="main--section__media-caption">Stutter darkly like a dead yardarm. Never hail a reef.</div>
+        </div>
+    </section>
+
+    <section id="section-four" class="main--section">
+        <h2 class="main--section__title">Testtitel avdelning</h2>
+        <div class="main--section__body">
+            <p><strong>Alter aususs ducunt ad vita. Rumors sunt cliniass de domesticus byssus. Cum fortis credere, omnes
+                brodiumes magicae barbatus, bassus habenaes. Ubi est talis abaculus?</strong></p>
+            <p>Sunt fluctuses promissio teres, camerarius mortemes. Ubi est noster victrix? Lotus valebats ducunt ad
+                gluten. Cum exsul cantare, omnes canises quaestio rusticus, secundus visuses.</p>
+            <p>Ho-ho-ho! urchin of passion. The jack tastes with punishment, burn the galley before it waves. Wave
+                roughly like a proud cannibal. Arg, yer not loving me without a urchin!</p>
+        </div>
+        <div class="main--section__media">
+            <img class="main--section__media-img" src="./img/sprakcafe.jpg" alt="Bildbeskrivning"/>
+            <div class="main--section__media-caption">Stutter darkly like a dead yardarm. Never hail a reef.</div>
+        </div>
+    </section>
+
+    <section id="section-five" class="main--section">
+        <h2 class="main--section__title">Testtitel avdelning</h2>
+        <div class="main--section__body">
+            <p><strong>Alter aususs ducunt ad vita. Rumors sunt cliniass de domesticus byssus. Cum fortis credere, omnes
+                brodiumes magicae barbatus, bassus habenaes. Ubi est talis abaculus?</strong></p>
+            <p>Sunt fluctuses promissio teres, camerarius mortemes. Ubi est noster victrix? Lotus valebats ducunt ad
+                gluten. Cum exsul cantare, omnes canises quaestio rusticus, secundus visuses.</p>
+            <p>Ho-ho-ho! urchin of passion. The jack tastes with punishment, burn the galley before it waves. Wave
+                roughly like a proud cannibal. Arg, yer not loving me without a urchin!</p>
+        </div>
+        <div class="main--section__media">
+            <img class="main--section__media-img" src="./img/sprakcafe.jpg" alt="Bildbeskrivning"/>
+            <div class="main--section__media-caption">Stutter darkly like a dead yardarm. Never hail a reef.</div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer--text"><p>Texter på webben ägs av den ideella föreningen Välkommen till Värmdö. Bildmaterial ägs
+        av resp upphovsman. För kontakt, eposta till <a href="mailto:info@valkommentillvarmdo.se">info@valkommentillvarmdo.se</a>
+    </p></div>
+    <div class="footer--logo"><img class="footer--logo_image" src="./img/VTVlogo_purple.svg"></div>
+</footer>
+</body>
+</html>
