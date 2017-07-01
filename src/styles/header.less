@@ -1,0 +1,69 @@
+@import './definitions.less';
+
+.header--logo {
+    width: 100%;
+    height: 50%;
+    max-width: 700px;
+    float: left;
+
+    &-wrapper {
+        width: 100%;
+        background-color: @signal-color;
+        display: flex;
+    }
+}
+
+header ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.header {
+    &--language-menu {
+        .current {
+            color: @signal-color;
+            cursor: default;
+
+            &.header--language-menu__item:hover {
+                text-decoration: none;
+            }
+        }
+
+        &__item {
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &--section-menu {
+
+        &__item {
+            cursor: pointer;
+            padding: 10px;
+
+            &:hover {
+                background-color: @signal-color;
+                color: white;
+                text-decoration: underline;
+            }
+
+            &.callout {
+                background-color: @signal-color;
+                color: white;
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                    text-decoration: underline;
+                }
+            }
+
+            a {
+                cursor: pointer;
+            }
+        }
+    }
+}

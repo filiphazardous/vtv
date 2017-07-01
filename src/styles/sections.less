@@ -1,0 +1,48 @@
+@import './definitions.less';
+
+main {
+    width: calc(~"100% - 100px");
+    margin: 50px;
+}
+
+.main {
+
+    &--section {
+        position: relative;
+        min-height: 300px;
+        margin-bottom: 50px;
+
+        &__media {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            width: 100%;
+
+            &-img {
+                width: calc(~"100% - 50px");
+                height: auto;
+            }
+
+            &-caption {
+                font-style: italic;
+                color: @signal-color;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .main {
+        max-width: 500px;
+        margin: 25px;
+        float: left;
+    }
+
+    .main--section__media {
+        position: absolute;
+        top: 0;
+        left: calc(~"100% + 25px");
+        width: 400px;
+        padding: 0;
+    }
+}

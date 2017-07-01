@@ -2,7 +2,7 @@
   "name": "vtv-generator",
   "version": "0.0.1",
   "scripts": {
-    "start": "./curlContentful.sh && ./dlAssets.php && webpack --progress --profile --bail"
+    "start": "./curlContentful.sh && ./dlAssets.php && webpack --progress --profile --bail && ./buildFinalStep.sh"
   },
   "author": "Filip Joelsson <filip@pixiecoer.com>",
   "dependencies": {

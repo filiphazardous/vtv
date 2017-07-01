@@ -1,6 +1,8 @@
-<h2 class="section-title">{{title}}</h2>
-<div class="section-body">{{{body}}}</div>
-<div class="section-media-block media">
-    <img class="media-image" src="{{media}} alt={{mediaDescription}}"/>
-    <span class="media-caption">{{mediaCaption}}</span>
-</div>
+<section {{{anchor}} class="main--section">
+    <h2 class="main--section__title">{{title}}</h2>
+    <div class="main--section__body">{{{body}}}</div>
+    <div class="main--section__media">
+        <img class="main--section__media-img" src="{{media}}" alt="{{mediaDescription}}"/>
+        <div class="main--section__media-caption">{{mediaCaption}}</div>
+    </div>
+</section>
