@@ -5,3 +5,4 @@ dist
 content.json
 assetData.json
 env.txt
+.DS_Store
