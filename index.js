@@ -31,7 +31,8 @@ export default function render(locals) {
 
   const keysToPages = mapKeysToPages(content);
   let retVals = {};
-  ['INDEX', 'OM_OSS'].forEach((pageKey) => {
+
+  Object.keys(keysToPages).forEach((pageKey) => {
 
     const menuLanguageData = convertToMenuItemAr(content, 'LANGUAGE', null, locals.path);
     const menuMainData = convertToMenuItemAr(content, 'MAIN', locals.path, keysToPages[pageKey]);
@@ -61,6 +62,7 @@ export default function render(locals) {
       main: processedMain,
       footer: processedFooter,
     });
+
     retVals[locals.path + keysToPages[pageKey]] = page({head: processedHead, body: processedBody});
   });
 

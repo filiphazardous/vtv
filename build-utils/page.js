@@ -3,11 +3,13 @@
 export {mapKeysToPages};
 
 function mapKeysToPages(content) {
-  return {
-    INDEX: 'index.html',
-    OM_OSS: 'om_oss.html',
-    'index.html': 'INDEX',
-    'om_oss.html': 'OM_OSS',
-  };
+
+  let retVal = {};
+  content.items
+    .filter(i => i.sys.contentType.sys.id === 'page')
+    .forEach(i => {
+      retVal[i.fields.key] = i.fields.filename;
+    });
+  return retVal;
 }
 
