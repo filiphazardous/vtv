@@ -6,7 +6,6 @@
   },
   "author": "Filip Joelsson <filip@pixiecoer.com>",
   "dependencies": {
-    "contentful": "^4.1.2",
     "extract-text-webpack-plugin": "^2.1.2",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
